@@ -1,6 +1,6 @@
 # cryptocus
 
-> Not sure yet
+Playing around with VueJs and PWA
 
 ## Build Setup
 
