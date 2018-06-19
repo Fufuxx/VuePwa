@@ -1,18 +1,15 @@
 <template>
   <div id="app">
-    <header>
-      <span>Vue.js PWA</span>
-    </header>
-    <main>
-      <img src="./assets/logo.png" alt="Vue.js PWA">
-      <router-view></router-view>
-    </main>
+    <header-view/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
+import HeaderView from './components/HeaderView.vue'
 export default {
-  name: 'app'
+  name: 'app',
+  components: { HeaderView }
 }
 </script>
 
