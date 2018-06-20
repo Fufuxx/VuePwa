@@ -17,7 +17,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   .hero {
     height: 90vh;
     display: flex;
