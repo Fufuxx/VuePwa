@@ -1,12 +1,8 @@
 <template>
-  <div role="main">
-    <div class="jumbotron">
-      <div class="container">
-        <h1 class="display-3">{{ message }}</h1>
-        <p>
-          This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.
-        </p>
-      </div>
+  <div class="hero">
+    <div>
+      <h1 class="display-3">{{ message }}</h1>
+      <p class="lead">This is the homepage of your vue app</p>
     </div>
   </div>
 </template>
@@ -22,5 +18,15 @@ export default {
 </script>
 
 <style scoped>
-  
+  .hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .hero .lead {
+    font-weight: 200;
+    font-size: 1.5rem;
+  }
 </style>

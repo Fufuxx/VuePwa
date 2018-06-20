@@ -19,14 +19,14 @@
     </div>
   </div> -->
   <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand" href="#">Cryptocus</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <router-link @click.native="sethome()"  to="/" class="navbar-brand" tag="a">Cryptocus</router-link>
+    <button id="hamburger" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <router-link v-for="item in menu_items" v-bind:class="{ 'active': item.isActive, 'nav-item': true }"
+        <router-link v-for="item in menu_items" :key="item.name" v-bind:class="{ 'active': item.isActive, 'nav-item': true }"
           tag="li" :to="item.url" @click.native="menuclick(item)">
           <a class="nav-link">{{ item.name }}</a>
         </router-link>
@@ -51,8 +51,20 @@ export default {
   },
   methods: {
     menuclick: function (item) {
+      document.getElementById('hamburger').click()
       this.$data.menu_items.forEach(function (e) { e.isActive = false })
       item.isActive = true
+    },
+    sethome: function () {
+      this.$data.menu_items.forEach(
+        function (e) {
+          if (e.name === 'Home') {
+            e.isActive = true
+          } else {
+            e.isActive = false
+          }
+        }
+      )
     }
   }
 }
