@@ -15,7 +15,7 @@
 export default {
   data () {
     return {
-      message: 'Hello Home'
+      message: 'Hello Search'
     }
   }
 }
