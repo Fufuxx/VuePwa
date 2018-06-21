@@ -4,8 +4,8 @@
     <p>Twitter Search</p>
     <p v-if="tweets.length === 0">No tweet found...</p>
     <ul v-if="tweets.length > 0" class="list-unstyled">
-      <div class="media" v-for="tweet in tweets" :key="tweet.id">
-        <img class="mr-3" src="/assets/logo.png" alt="Generic placeholder image">
+      <div class="media tweet-cmp mb-2" v-for="tweet in tweets" :key="tweet.id">
+        <img class="mr-3 media-img" src="/static/img/icons/twitter.png" alt="Generic placeholder image">
         <div class="media-body">
           <h5 class="mt-0" v-html="tweet.source"></h5>
           {{ tweet.text }}
