@@ -29,10 +29,6 @@ app.get('/tweets', function(req, res){
   });
 });
 
-app.get('*', function(req, res){
-  res.redirect('/');
-});
-
 var port = process.env.PORT || 3000;
 app.listen(port);
 

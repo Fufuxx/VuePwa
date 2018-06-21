@@ -7,7 +7,7 @@
       <div class="media" v-for="tweet in tweets" :key="tweet.id">
         <img class="mr-3" src="/assets/logo.png" alt="Generic placeholder image">
         <div class="media-body">
-          <h5 class="mt-0">{{ tweet.source }}</h5>
+          <h5 class="mt-0" v-html="tweet.source"></h5>
           {{ tweet.text }}
         </div>
       </div>
