@@ -16,41 +16,6 @@
   </nav>
 </template>
 
-<script>
-export default {
-  data () {
-    return {
-      header_text: 'Cyptocus',
-      menu_items: [
-        { name: 'Home', url: '/', isActive: true },
-        { name: 'Search', url: '/search', isActive: false }
-      ]
-    }
-  },
-  methods: {
-    menuclick: function (item) {
-      if (document.getElementById('collapsible').classList.contains('show')) {
-        document.getElementById('collapsible').classList.remove('show')
-      }
-      this.$data.menu_items.forEach(function (e) { e.isActive = false })
-      item.isActive = true
-    },
-    sethome: function () {
-      this.$data.menu_items.forEach(
-        function (e) {
-          if (e.name === 'Home') {
-            e.isActive = true
-          } else {
-            e.isActive = false
-          }
-        }
-      )
-    }
-  }
-}
-</script>
-
+<script src="./HeaderVIew.js"></script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-  .navbar{ background-color: rgb(33, 133, 208); }
-</style>
+<style src="./HeaderView.css" scoped></style>

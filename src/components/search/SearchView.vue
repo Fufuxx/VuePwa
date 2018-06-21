@@ -5,16 +5,5 @@
   </div>
 </template>
 
-<script>
-export default {
-  data () {
-    return {
-      message: 'Hello Search'
-    }
-  }
-}
-</script>
-
-<style scoped>
-  
-</style>
+<script src="./SearchView.js"></script>
+<style src="./SearchView.css" scoped></style>

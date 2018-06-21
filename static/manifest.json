@@ -1,6 +1,6 @@
 {
-  "name": "cryptocus",
-  "short_name": "cryptocus",
+  "name": "VueJs",
+  "short_name": "Vue",
   "icons": [
     {
       "src": "/static/img/icons/twitter.png",
