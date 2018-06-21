@@ -1,10 +1,10 @@
 <template>
   <form class="p-3">
     <div class="form-group row">
-      <input type="text" class="form-control col-sm-10" id="todoInput" placeholder="Add Todo..." 
+      <input type="text" class="form-control col-9" id="todoInput" placeholder="Add Todo..." 
           v-model="text" />
-      <div class="col-sm-2 pl-2">
-        <button type="submit" class="btn btn-primary" v-on:click="addTodo()">Add New Todo</button>
+      <div class="col-3 pl-2">
+        <button type="submit" class="btn btn-primary" v-on:click="addTodo()">Submit</button>
       </div>
     </div>
   </form>
