@@ -6,6 +6,10 @@ app = express();
 
 app.use(serveStatic(__dirname + "/dist"));
 
+app.get('*', function(req, res){
+  res.redirect('/');
+});
+
 var port = process.env.PORT || 3000;
 app.listen(port);
 

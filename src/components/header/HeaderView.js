@@ -3,7 +3,7 @@ export default {
     return {
       header_text: 'VueJs app',
       menu_items: [
-        { name: 'Home', url: '/', isActive: true },
+        { name: 'Home', url: '/', isActive: false },
         { name: 'Todo', url: '/todo', isActive: false },
         { name: 'Search', url: '/search', isActive: false }
       ]
@@ -28,5 +28,9 @@ export default {
         }
       )
     }
+  },
+  mounted(){
+    let self = this
+    this.menu_items.filter(function (e) { return e.url === self.$route.path })[0].isActive = true;
   }
 }
