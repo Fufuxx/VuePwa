@@ -13,8 +13,8 @@ Vue.use(VueResource)
 
 Vue.filter('formatDate', function (value) {
   if (value) {
-    value = new Date(value)
-    return moment(String(value)).format('MM/DD/YYYY hh:mm')
+    value = new Date(value).toISOString()
+    return moment(value).format('MM/DD/YYYY hh:mm')
   }
 })
 

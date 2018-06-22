@@ -9,7 +9,7 @@
         <div class="media-body">
           <!-- <h5 v-if="tweet.entities.urls.length == 0" class="mt-0" v-html="tweet.source"></h5> -->
           <p class="font-weight-light small-text mt-0 mb-1" v-if="tweet.entities.urls.length === 0">{{ tweet.created_at | formatDate }}</p>
-          <p><a class="font-weight-light small-text mt-0 mb-1" v-if="tweet.entities.urls.length > 0" v-bind:href="tweet.entities.urls[0].url" target="_blank">{{ tweet.created_at | formatDate }}</a></p>
+          <p v-if="tweet.entities.urls.length > 0" class="font-weight-light small-text mt-0 mb-1"><a v-bind:href="tweet.entities.urls[0].url" target="_blank">{{ tweet.created_at | formatDate }}</a></p>
           {{ tweet.text }}
         </div>
       </div>
