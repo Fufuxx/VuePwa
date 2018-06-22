@@ -7,8 +7,9 @@
       <div class="media tweet-cmp mb-2" v-for="tweet in tweets" :key="tweet.id">
         <img class="mr-3 media-img" v-bind:src="tweet.user.profile_image_url_https" alt="Profile Img">
         <div class="media-body">
-          <h5 v-if="tweet.entities.urls.length == 0" class="mt-0" v-html="tweet.source"></h5>
-          <h5 v-if="tweet.entities.urls.length > 0" class="mt-0"><a v-bind:href="tweet.entities.urls[0].url" target="_blank">Direct Link</a></h5>
+          <!-- <h5 v-if="tweet.entities.urls.length == 0" class="mt-0" v-html="tweet.source"></h5> -->
+          <p class="mt-0" v-if="tweet.entities.urls.length === 0">{{ moment(new Date(tweet.created_at)).format('MM/DD/YYYY hh:mm') }}</p>
+          <a class="mt-0" v-if="tweet.entities.urls.length > 0" v-bind:href="tweet.entities.urls[0].url" target="_blank">{{ moment(new Date(tweet.created_at)).format('MM/DD/YYYY hh:mm') }}</a>
           {{ tweet.text }}
         </div>
       </div>
