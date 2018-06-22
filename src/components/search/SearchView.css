@@ -4,3 +4,6 @@
   margin: 10px;
 }
 .tweet-cmp{ border-bottom: 1px solid #ccc; }
+.small-text{
+  font-size:12px;
+}
