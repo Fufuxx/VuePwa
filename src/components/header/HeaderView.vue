@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark">
-    <router-link @click.native="sethome()"  to="/" class="navbar-brand" tag="a">Cryptocus</router-link>
+    <router-link @click.native="sethome()"  to="/" class="navbar-brand" tag="a">VueJs App</router-link>
     <button id="hamburger" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsible" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

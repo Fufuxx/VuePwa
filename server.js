@@ -16,8 +16,8 @@ app = express();
 app.use(serveStatic(__dirname + "/dist"));
 
 app.get('/tweets', function(req, res){
-  var query = 'catena media';
-  client.get('search/tweets', { q : query, count : 100, result_type: 'recent' }, 
+  var query = 'world cup';
+  client.get('search/tweets', { q : query, count : 50, result_type: 'recent' }, 
       function(error, tweets, response) {
           if(error){
               console.log(error);
