@@ -5,7 +5,7 @@
     <p v-if="tweets.length === 0">No tweet found...</p>
     <ul v-if="tweets.length > 0" class="list-unstyled">
       <div class="media tweet-cmp mb-2" v-for="tweet in tweets" :key="tweet.id">
-        <img class="mr-3 media-img" src="tweet.user.profile_image_url_https" alt="Profile Img">
+        <img class="mr-3 media-img" v-bind:src="tweet.user.profile_image_url_https" alt="Profile Img">
         <div class="media-body">
           <h5 class="mt-0" v-html="tweet.source"></h5>
           {{ tweet.text }}
