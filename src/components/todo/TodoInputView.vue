@@ -4,7 +4,7 @@
       <input type="text" class="form-control col-9" id="todoInput" placeholder="Add Todo..." 
           v-model="text" />
       <div class="col-3 pl-2">
-        <button type="submit" class="btn btn-primary" v-on:click="addTodo()">Submit</button>
+        <button type="button" class="btn btn-primary" v-on:click="addTodo()">Submit</button>
       </div>
     </div>
   </form>
