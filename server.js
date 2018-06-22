@@ -1,6 +1,7 @@
-var express = require('express');
-var path = require('path');
-var serveStatic = require('serve-static');
+const express = require('express');
+const path = require('path');
+const serveStatic = require('serve-static');
+const request = require('request');
 
 const Twitter = require('twitter');
 
@@ -15,8 +16,22 @@ app = express();
 
 app.use(serveStatic(__dirname + "/dist"));
 
-app.get('/tweets', function(req, res){
-  var query = 'world cup';
+// This gives me the ability to call req.body at any point in order to get the content of the body of any request
+app.use(function(req, res, next){
+    var data='';
+    req.setEncoding('utf8');
+    req.on('data', function(chunk) {
+       data += chunk;
+    });
+
+    req.on('end', function() {
+        req.body = data;
+        next();
+    });
+});
+
+app.post('/tweets', function(req, res, next){
+  let query = JSON.parse(req.body).query+' -Filter:links';
   client.get('search/tweets', { q : query, count : 50, result_type: 'recent' }, 
       function(error, tweets, response) {
           if(error){
