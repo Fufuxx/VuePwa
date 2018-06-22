@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid">
-    <h1 class="display-3">{{ message }}</h1>
+    <h1 class="h1">{{ message }}</h1>
     <todo-input-view v-on:todo:add="addTodo"></todo-input-view>
     <ul v-if="todos.length > 0" class="list-group">
       <li v-for="todo in todos" :key="todo.id" class="list-group-item p-2">
