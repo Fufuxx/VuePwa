@@ -1,2 +1,6 @@
-.media-img{ width:65px; }
+.media-img{ 
+  width: 50px;
+  border-radius: 50%;
+  margin: 10px;
+}
 .tweet-cmp{ border-bottom: 1px solid #ccc; }
