@@ -30,8 +30,9 @@ app.use(function(req, res, next){
     });
 });
 
-app.post('/tweets', function(req, res, next){
-  let query = JSON.parse(req.body).query+' -Filter:links';
+app.get('/tweets', function(req, res, next){
+  let query = req.query.search+' -Filter:links';
+  console.log('Query -- '+query);
   client.get('search/tweets', { q : query, count : 50, result_type: 'recent' }, 
       function(error, tweets, response) {
           if(error){
