@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid mt-4">
     <h1 class="h1">{{ message }}</h1>
-    <div class="form-group row">
+    <div class="form-group row p-2">
       <input type="text" class="form-control col-9" id="searchInput" placeholder="Search Tweets..." 
           v-model="tweetsearch" />
       <div class="col-3 pl-2">
